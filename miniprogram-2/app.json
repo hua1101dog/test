@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/tutor/tutor",
+    "pages/blocks/competitions/competitions",
+    "pages/blocks/blocks",
+    "pages/tutor/projectdetail/projectdetail",
+    "pages/blocks/partnerConference/partnerConference",
+    "pages/blocks/partnerDetail/partnerDetail",
+    "pages/index/newslist/newslist",
+    "pages/index/newsdetail/newsdetail",
+    "pages/logs/logs"
+  ],
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#00F9FF",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/lib/img/icon-index.png",
+        "selectedIconPath": "/lib/img/icon-index-selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tutor/tutor",
+        "iconPath": "/lib/img/icon-score.png",
+        "selectedIconPath": "/lib/img/icon-score-selected.png",
+        "text": "导师评分"
+      },
+      {
+        "pagePath": "pages/blocks/blocks",
+        "iconPath": "/lib/img/icon-block.png",
+        "selectedIconPath": "/lib/img/icon-block-selected.png",
+        "text": "分区"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "CEC双创",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

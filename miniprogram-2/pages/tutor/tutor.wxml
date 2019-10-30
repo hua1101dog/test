@@ -1,0 +1,44 @@
+<scroll-view scroll-y wx:if="{{!loginStatue}}" class="logincontainer">
+  <view class="loginform">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view>
+        <input name="account" class="loginput" placeholder="请输入账号" placeholder-class="loginputph"></input>
+      </view>
+      <view>
+        <input name="psword" password class="loginput" placeholder="请输入密码" placeholder-class="loginputph"></input>
+      </view>
+      <view>
+        <button form-type="submit" class="logbtn">登录</button>
+      </view>
+    </form>
+  </view>
+</scroll-view>
+<scroll-view scroll-y wx:else class="tutorcontainer">
+  <!-- 导师详情 入围项目列表 -->
+  <view class="panel">
+    <view class="welcoming">欢迎您，
+      <text class="tutorname">{{tutorInfo.tutorname}}</text>导师，请您评分！
+      <text class="logout" bindtap="logOut">退出</text>
+    </view>
+    <view class="projectlist">
+      <view class="eachpanel projects">
+        <block wx:for="{{projects}}" wx:key="competition">
+          <view class="{{item.isSetScore==1?'scored':''}} project" data-id="{{item.id}}" bindtap="toProjectDetail">
+            <view wx:if="{{item.isSetScore==1}}" class="scoredtag">您已评分</view>
+            <view class="protopleft">
+              <image class="projectimg" src="{{item.img}}"></image>
+              <view class="projectaddress">{{item.address}}</view>
+            </view>
+            <view class="protopright">
+              <view class="projectname">{{item.name}}</view>
+              <view class="projectcompany">{{item.company}}</view>
+            </view>
+            <view class="projectdetail">
+              <text>{{item.detail}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</scroll-view>

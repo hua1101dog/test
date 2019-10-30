@@ -1,0 +1,17 @@
+<scroll-view scroll-y class="bgcontainer">
+  <view class="newscontainer">
+    <block wx:for="{{newslist}}" wx:key="kk">
+      <view class="newsone" data-index="{{index}}" data-imgurl="{{item.endImage}}" bindtap="toNewsdetail">
+        <view class="titcontainer">
+          <image class="imgtit" src="{{item.headImage}}">
+          </image>
+          <view class="texttit">{{item.title}}</view>
+          <view class="time">
+            <text class="iconfont icon-shijian timeicon" />
+            <text class="timetext">{{item.date}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</scroll-view>

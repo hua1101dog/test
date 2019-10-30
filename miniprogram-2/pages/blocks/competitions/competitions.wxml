@@ -1,0 +1,333 @@
+<view class="titlepart">
+  <block wx:for="{{session.data}}" wx:key="comtitle">
+    <view class="{{selectedindex == index?'selected':''}} title" bindtap="selectpanel" data-type="{{item}}" data-index="{{index}}">{{item.title}}</view>
+  </block>
+</view>
+<!-- <scroll-view scroll-y class="bgcontainer">
+  <view class="panel"> -->
+<block wx:if="{{type==0}}">
+  <!-- 第三届 -->
+  <block wx:if="{{selectedindex==0}}">
+    <!-- 大赛宣传 -->
+    <scroll-view scroll-y class="bgcontainer">
+      <view class="panel">
+        <video src="{{thirdCompData.videoSrc}}" autoplay controls="{{true}}" class="videoclass"></video>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:elif="{{selectedindex==1}}">
+    <!-- 大赛简介 -->
+    <scroll-view scroll-y class="bgcontainer">
+      <view class="panel">
+        <view class="eachpanel">
+          <block wx:for="{{thirdCompData.intro.partA}}" wx:key="competition">
+            <view class="little_title">
+              {{item.title}}
+            </view>
+            <view class="little_content">
+              <text>{{item.content}}</text>
+            </view>
+          </block>
+          <view class="table tableintro">
+            <view class="tr">
+              <view class="th lineteam">单位名称</view>
+              <view class="th linepro">项目名称</view>
+            </view>
+            <block wx:for="{{thirdCompData.intro.joinList}}" wx:key="{[code]}">
+              <view class="tr">
+                <view class="td lineteam"><text>{{item.code}}</text></view>
+                <view class="td linepro"><text>{{item.text}}</text></view>
+              </view>
+            </block>
+          </view>
+          <block wx:for="{{thirdCompData.intro.partB}}" wx:key="competition">
+            <view class="little_title">
+              {{item.title}}
+            </view>
+            <view class="little_content">
+              <text>{{item.content}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:elif="{{selectedindex==2}}">
+    <!-- 大赛赛程 -->
+    <scroll-view scroll-y class="bgcontainer">
+      <view class="panel">
+        <view class="eachpanel">
+          <block wx:for="{{thirdCompData.schedule}}" wx:key="competition">
+            <view class="little_title">
+              {{item.title}}
+            </view>
+            <view class="little_content">
+              <text>{{item.content}}</text>
+            </view>
+          </block>
+        </view>
+        <view class="table tableschedule">
+          <block wx:for="{{thirdCompData.listData}}" wx:key="{[code]}">
+            <view class="tr">
+              <view class="td linesmall"><text>{{item.code}}</text></view>
+              <view class="td linemiddle"><text>{{item.text}}</text></view>
+              <view class="td linesbig {{index==2||index==3?'linehauto':''}}"><text>{{item.type}}</text></view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:elif="{{selectedindex==3}}">
+    <!-- 入围项目 -->
+    <scroll-view scroll-y class="bgcontainer">
+      <view class="panel">
+        <view class="eachpanel projects">
+          <block wx:for="{{thirdCompData.projects}}" wx:key="competition">
+            <view class="project">
+              <view class="protopleft">
+                <image class="projectimg" src="{{item.img}}"></image>
+                <view class="projectaddress">{{item.address}}</view>
+              </view>
+              <view class="protopright">
+                <view class="projectname">{{item.name}}</view>
+                <view class="projectcompany">{{item.company}}</view>
+              </view>
+              <view class="projectdetail">
+                <text>{{item.detail}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:else>
+    <!-- 大赛导师 -->
+    <scroll-view scroll-y class="bgcontainer">
+      <view class="panel">
+        <view class="eachpanel">
+          <block wx:for="{{tutors}}" wx:key="competition">
+            <view class="tutor">
+              <image class="tutorimg" src="{{item.img}}"></image>
+              <view class="tutorgeneral">
+                <view class="tutorname">{{item.name}}</view>
+                <view class="tutortype">{{item.type}}</view>
+                <view class="tutortitle">{{item.title}}</view>
+              </view>
+              <view class="tutordetail">
+                <text>{{item.detail}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+  <!-- {{type}} -->
+</block>
+<block wx:elif="{{type==1}}">
+  <!-- 第二届 -->
+  <!-- {{type}} -->
+  <block wx:if="{{selectedindex==0}}">
+    <!-- 大赛简介 -->
+    <scroll-view scroll-y class="bgcontainer">
+      <view class="panel">
+        <view class="eachpanel">
+          <block wx:for="{{secondCompData.intro}}" wx:key="competition">
+            <view class="little_title">
+              {{item.title}}
+            </view>
+            <view class="little_content">
+              <text>{{item.content}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:elif="{{selectedindex==1}}">
+    <!-- 大赛赛程 -->
+    <scroll-view scroll-y class="bgcontainer">
+      <view class="panel">
+        <view class="eachpanel">
+          <block wx:for="{{secondCompData.schedule}}" wx:key="competition">
+            <view class="little_title">
+              {{item.title}}
+            </view>
+            <view class="little_content">
+              <text>{{item.content}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:elif="{{selectedindex==2}}">
+    <!-- 总决赛入围名单 -->
+    <scroll-view scroll-y class="bgcontainer">
+      <view class="panel">
+        <view class="eachpanel">
+          <block wx:for="{{secondCompData.list}}" wx:key="competition">
+            <view class="little_title">
+              {{item.title}}
+            </view>
+            <view class="little_content">
+              <text>{{item.content}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:elif="{{selectedindex==3}}">
+    <!-- 大赛导师 -->
+    <scroll-view scroll-y class="bgcontainer">
+      <view class="panel">
+        <view class="eachpanel">
+          <block wx:for="{{tutors}}" wx:key="competition">
+            <view class="tutor">
+              <image class="tutorimg" src="{{item.img}}"></image>
+              <view class="tutorgeneral">
+                <view class="tutorname">{{item.name}}</view>
+                <view class="tutortype">{{item.type}}</view>
+                <view class="tutortitle">{{item.title}}</view>
+              </view>
+              <view class="tutordetail">
+                <text>{{item.detail}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:elif="{{selectedindex==4}}">
+    <!-- 总决赛现场回顾 -->
+    <scroll-view scroll-y class="bgcontainer">
+      <view class="panel">
+        <view class="eachpanel">
+          <block wx:for="{{secondCompData.review}}" wx:key="competition">
+            <view class="little_title">
+              <image src="{{item.title}}"></image>
+            </view>
+            <view class="little_content imagetext">{{item.content}}
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:else>
+    <!-- 合作单位 -->
+    <scroll-view scroll-y class="bgcontainer">
+      <view class="panel">
+        <view class="eachpanel">
+          <block wx:for="{{secondCompData.cooperUnit}}" wx:key="competition">
+            <view class="little_title">
+              <text>{{item.title}}</text>
+            </view>
+            <view class="little_content">
+              <text>{{item.content}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+</block>
+<block wx:else>
+  <!-- 第一届 -->
+  <!-- {{type}} -->
+  <block wx:if="{{selectedindex==0}}">
+    <!-- 大赛简介 -->
+    <scroll-view scroll-y class="bgcontainer">
+      <view class="panel">
+        <view class="eachpanel">
+          <block wx:for="{{firstCompData.intro}}" wx:key="competition">
+            <view class="little_title">
+              {{item.title}}
+            </view>
+            <view class="little_content">
+              <text>{{item.content}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:elif="{{selectedindex==1}}">
+    <!-- 大赛赛程 -->
+    <scroll-view scroll-y class="bgcontainer">
+      <view class="panel">
+        <view class="eachpanel">
+          <block wx:for="{{firstCompData.schedule}}" wx:key="competition">
+            <view class="little_title">
+              {{item.title}}
+            </view>
+            <view class="little_content">
+              <text>{{item.content}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:elif="{{selectedindex==2}}">
+    <!-- 总决赛入围名单 -->
+    <scroll-view scroll-y class="bgcontainer">
+      <view class="panel">
+        <view class="eachpanel">
+          <block wx:for="{{firstCompData.list}}" wx:key="competition">
+            <view class="little_title">
+              {{item.title}}
+            </view>
+            <view class="little_content">
+              <text>{{item.content}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:elif="{{selectedindex==3}}">
+    <!-- 大赛导师 -->
+    <scroll-view scroll-y class="bgcontainer">
+      <view class="panel">
+        <view class="eachpanel">
+          <block wx:for="{{tutors}}" wx:key="competition">
+            <view class="tutor">
+              <image class="tutorimg" src="{{item.img}}"></image>
+              <view class="tutorgeneral">
+                <view class="tutorname">{{item.name}}</view>
+                <view class="tutortype">{{item.type}}</view>
+                <view class="tutortitle">{{item.title}}</view>
+              </view>
+              <view class="tutordetail">
+                <text>{{item.detail}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:else>
+    <!-- 总决赛现场回顾 -->
+    <scroll-view scroll-y class="bgcontainer">
+      <view class="panel">
+        <view class="eachpanel">
+          <block wx:for="{{firstCompData.review}}" wx:key="competition">
+            <view class="little_title">
+              <image src="{{item.title}}"></image>
+            </view>
+            <view class="little_content imagetext">{{item.content}}
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+</block>
+<!-- </view>
+</scroll-view> -->

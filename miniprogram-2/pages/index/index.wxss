@@ -1,0 +1,96 @@
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.u-wrp-bnr {
+  width: 578rpx;
+  height: 330rpx;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50rpx;
+  margin: 0 auto;
+}
+
+.u-img-slide {
+  width: 100%;
+  height: 284rpx;
+}
+
+page {
+  height: 100%;
+}
+
+.bgcontainer{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-size: 100% 100%;
+  background-image: url("http://contest.ovuems.com/applet/indexbg.png")
+}
+
+.panel {
+  /* padding-top: 713rpx; */
+}
+
+.tit {
+  position: absolute;
+  width: 375rpx;
+  height: 375rpx;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 187rpx;
+}
+
+.more {
+  width: 136rpx;
+  height: 37rpx;
+  line-height: 37rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #0f2666; 
+  position: absolute;
+  right: 40rpx;
+  top: -50rpx;
+  background-size: 100% 100%;
+  background-image: url("//contest.ovuems.com/applet/morenews.png")
+}
+
+.animation {
+  z-index: 999;
+  width: 20rpx;
+  position: absolute;
+  bottom: 10%;
+}
+
+.swipercontainer{
+  padding-top: 713rpx;
+}
+
+.swiperimage {
+  width: 648rpx;
+  height: 392rpx;
+  position: relative;
+  margin: 0 auto;
+  background-size: 100% 100%;
+  background-image: url("//contest.ovuems.com/applet/newsbgone.png")
+}

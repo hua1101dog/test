@@ -1,0 +1,56 @@
+page{
+  height: 100%;
+}
+
+.bgcontainer {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-image: url("//contest.ovuems.com/applet/listbg.png")
+}
+
+.panel{
+  border: 2rpx solid #1FB6D8;
+  margin: 48rpx 40rpx 48rpx 52rpx;
+  padding: 22rpx 24rpx;
+}
+
+.name{
+  color: #00F9FF;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+
+.tag{
+  color: #F6DB5E;
+  font-size: 22rpx;
+  padding-top: 14rpx;
+  padding-bottom: 18rpx;
+}
+
+.little-title{
+  font-weight: 700;
+  color:#00F9FF;
+  font-size: 24rpx;
+  padding-top: 24rpx;
+}
+
+.little-content{
+  color:#DFDFDF;
+  font-size: 20rpx;
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+  line-height: 38rpx;
+}
+
+.topborder{
+  position: relative;
+}
+.topborder::before{
+  width: 108%;
+  height: 1rpx;
+  content: "";
+  position: absolute;
+  border-bottom:  1rpx dashed #B2B8CB;
+  left: -22rpx;
+}

@@ -1,0 +1,270 @@
+@import "../../../lib/css/icon.wxss";
+
+page {
+  height: 100%;
+}
+
+.maintitle {
+  text-align: center;
+}
+
+.icon-fanhui {
+  position: absolute;
+  left: 20rpx;
+  top: 6rpx;
+}
+
+.titlepart {
+  display: flex;
+  flex-wrap: wrap;
+  /* position: absolute; */
+  position: fixed;
+  padding: 57rpx 28rpx 0 28rpx;
+  z-index: 999;
+  background-size: 100% 100%;
+  background-image: url("//contest.ovuems.com/applet/back_tit.png")
+}
+
+.title {
+  width: 198rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  font-size: 26rpx;
+  color: #ffffff;
+  background-color: #133083;
+  text-align: center;
+  border: 2rpx solid #1FB6D8;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  margin-bottom: 17rpx;
+}
+
+.title.selected {
+  background: linear-gradient(to right, #5ad8f5, #a1fbff);
+  color: #ffffff;
+}
+
+.bgcontainer {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-image: url("//contest.ovuems.com/applet/listbg.png")
+}
+
+.imgcontainer {
+  width: 100%;
+}
+
+.panel {
+  padding-top: 258rpx;
+  padding-left: 46rpx;
+  padding-right: 46rpx;
+}
+
+.videoclass{
+  width: 100%;
+}
+
+.little_title {
+  color: #00f9ff;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+
+.little_title image {
+  width: 658rpx;
+  height: 332rpx;
+}
+
+.tutorsimg {
+  width: 100%;
+}
+
+.little_content {
+  color: #ffffff;
+  font-size: 24rpx;
+  padding-top: 24rpx;
+  padding-bottom: 54rpx;
+}
+
+.little_content.imagetext {
+  text-align: center;
+  font-size: 20rpx;
+}
+
+.tutor{
+  padding-top: 22rpx;
+  padding-left: 22rpx;
+  border: 2rpx solid #00f9ff;
+  margin-bottom: 28rpx;
+}
+
+.tutorimg{
+  width: 132rpx;
+  height: 164rpx;
+}
+
+.tutorgeneral{
+  position: absolute;
+  width: 480rpx;
+  padding-left: 10rpx;
+  display: inline-block;
+}
+
+.tutorname{
+  font-size: 30rpx;
+  color: #35DAFF;
+}
+
+.tutortype{
+  font-size: 24rpx;
+  color: #FFFFFF;
+  margin-top: 6rpx;
+  margin-bottom: 16rpx;
+}
+
+.tutortitle{
+  font-size: 20rpx;
+  color: #D1D1D1;
+}
+
+.tutordetail{
+  font-size: 20rpx;
+  color: #FFFFFF;
+  padding-top: 30rpx;
+  padding-right: 22rpx;
+  padding-bottom: 40rpx;
+}
+
+.projects{
+  margin-top: 70rpx;
+}
+
+.project{
+  width: 660rpx;
+  border: 2rpx solid #00f9ff;
+  margin-bottom: 80rpx;
+}
+
+.protopleft{
+  display: inline-block;
+  width: 176rpx;
+  height: 176rpx;
+  margin-left: 40rpx;
+  margin-top: -40rpx;
+  border: 2rpx solid #00F9FF;
+}
+
+.projectimg{
+  width: 176rpx;
+  height: 136rpx;
+}
+
+.projectaddress{
+  color: #00F9FF;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 24rpx;
+}
+
+.protopright{
+  display: inline-block;
+  width: 426rpx;
+  position: absolute;
+  margin-left: 12rpx;
+  margin-top: 22rpx;
+}
+
+.projectname{
+  color: #00F9FF;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.projectcompany{
+  color: #F6DB5E;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+
+.projectdetail{
+  padding: 24rpx 30rpx 24rpx 40rpx;
+  font-size: 20rpx;
+  color: #ffffff;
+  line-height: 36rpx;
+  word-wrap: break-word;
+}
+
+.table {
+  border-top: 1rpx solid #DADCE6;
+  border-left: 1rpx solid #DADCE6;
+  color: #FFFFFF;
+}
+
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.td {
+  width:40%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  border-right: 1rpx solid #DADCE6;
+  border-bottom: 1rpx solid #DADCE6;
+}
+.td.linesmall{
+  width: 28%;
+}
+.td.linemiddle{
+  width: 30%;
+}
+.td.linesbig{
+  width: 42%;
+}
+.th.lineteam,
+.td.lineteam{
+  width: 47%;
+}
+.th.linepro,
+.td.linepro{
+  width: 53%;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  font-size: 24rpx;
+  color: #00F9FF;
+  display: flex;
+  align-items: center;
+  border-right: 1rpx solid #DADCE6;
+  border-bottom: 1rpx solid #DADCE6;
+}
+
+.tableintro{
+  font-size: 16rpx;
+}
+.tableintro .tr{
+  height: 50rpx;
+}
+.tableintro .th{
+  height: 50rpx;
+}
+.tableintro .td{
+  line-height: 50rpx;
+}
+
+.tableschedule{
+  font-size: 20rpx;
+}
+.tableschedule .tr{
+  height: 3rem;
+}
+.tableschedule .td{
+  line-height: 3rem;
+}
+.tableschedule .td.linehauto{
+  line-height: 48rpx;
+}

@@ -1,0 +1,286 @@
+@import "../../../lib/css/icon.wxss";
+
+page {
+  height: 100%;
+}
+
+.bgcontainer {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-image: url("//contest.ovuems.com/applet/listbg.png")
+}
+
+.panel {
+  padding: 62rpx 44rpx 0 44rpx;
+}
+
+.welcoming {
+  color: #fff;
+  font-size: 26rpx;
+}
+
+.tutorname {
+  font-weight: bold;
+  color: #00f9ff;
+}
+
+.logout{
+  float: right;
+  margin-right: 26rpx;
+}
+
+.project {
+  width: 660rpx;
+  border: 2rpx solid #1fb6d8;
+  margin-top: 76rpx;
+}
+
+.protopleft {
+  display: inline-block;
+  width: 176rpx;
+  height: 176rpx;
+  margin-left: 40rpx;
+  margin-top: -40rpx;
+  border: 2rpx solid #1fb6d8;
+  background-color: #133083;
+}
+
+.projectimg {
+  width: 176rpx;
+  height: 136rpx;
+}
+
+.projectaddress {
+  color: #00f9ff;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.protopright {
+  display: inline-block;
+  width: 426rpx;
+  position: absolute;
+  margin-left: 12rpx;
+  margin-top: 22rpx;
+}
+
+.projectname {
+  color: #00f9ff;
+  font-size: 30rpx;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.projectcompany {
+  color: #f6db5e;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.projectdetail {
+  padding: 24rpx 30rpx 0 40rpx;
+  font-size: 20rpx;
+  color: #fff;
+  line-height: 36rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  margin-bottom: 24rpx;
+  word-wrap: break-word;
+}
+
+.scoredtag{
+  margin: 0 auto;
+  z-index: 999;
+  width: 192rpx;
+  height: 192rpx;
+  position: absolute;
+  font-weight: 700;
+  color: #666;
+  border: 4rpx solid #666;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  margin-left: -48px;
+  margin-top: -48px;
+  text-align: center;
+  line-height: 192rpx;
+}
+
+.imgtitle {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #00f9ff;
+  padding-top: 36rpx;
+  padding-bottom: 18rpx;
+}
+
+.project_swiper{
+  width: 660rpx;
+  height: 394rpx;
+}
+
+.img {
+  width: 660rpx;
+  height: 394rpx;
+}
+
+.imgtip {
+  text-align: center;
+  font-size: 20rpx;
+  color: #e2c8c8;
+}
+
+.scorebtn {
+  height: 92rpx;
+  line-height: 92rpx;
+  margin-top: 46rpx;
+  font-size: 46rpx;
+  font-weight: bold;
+  background-color: #00f9ff;
+  color: #15348c;
+}
+.unscore{
+  background-color: #00f9ff;
+  color: #15348c;
+}
+.scored{
+  background-color: #aaa;
+  color: #666;
+  position: relative;
+}
+
+.modal-box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  left: 0;
+}
+
+.modal-body {
+  position: relative;
+}
+
+.modal-content {
+  width: 630rpx;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+.unscormc{
+  height: 726rpx;
+  margin-top: 25%;
+}
+.scoredmc{
+  height: 660rpx;
+  margin-top: 30%;
+}
+
+.score-content{
+  margin-top: 20rpx;
+}
+
+.scoretip{
+  font-size: 22rpx;
+  color: #3157C5;
+  margin-left: 40rpx;
+  vertical-align: -22rpx;
+}
+
+.each{
+  position: relative;
+  margin-left: 38rpx;
+}
+
+
+.label{
+  position: absolute;
+  width: 130rpx;
+  top: 28rpx;
+  display: inline-block;
+  font-size: 26rpx;
+  color: #666666;
+}
+
+.scorepanel{
+  margin-left: 160rpx;
+  margin-top: 18rpx;
+  display: inline-block;
+  width: 412rpx;
+}
+
+.scorepicker{
+  height: 54rpx;
+  margin-bottom: 10rpx;
+}
+
+.scoreinput {
+  display: inline-block;
+  height: 54rpx;
+  width: 104rpx;
+  background-color: #ddd;
+  font-size: 50rpx;
+  color: #3157C5;
+  line-height: 54rpx;
+  text-align: center;
+  border-radius: 6rpx;
+}
+input.scoreinput{
+  margin-bottom: 10rpx;
+}
+
+.fen{
+  font-size: 22rpx;
+  color: #A8A8A8;
+  margin-left: 14rpx;
+  vertical-align: 10rpx;
+}
+
+.remarks {
+  width: 392rpx;
+  height: 84rpx;
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+  font-size: 22rpx;
+  color: #3157C5;
+  background-color: #ddd;
+  border-radius: 6rpx;
+}
+
+.remarksplaceholder{
+  color: #A8A8A8;
+  font-size: 22rpx;
+}
+
+.submitbtn {
+  width: 560rpx;
+  height: 74rpx;
+  margin-top: 24rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  background-color: #3157C5;
+  color: #FFFFFF;
+}
+
+.closebtn{
+  color: #ddd;
+  position: absolute;
+  right: 72rpx;
+  top: -72rpx;
+  font-size: 48rpx;
+}
+
+.soredtext{
+
+}

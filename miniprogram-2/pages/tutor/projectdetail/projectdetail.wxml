@@ -1,0 +1,108 @@
+<scroll-view scroll-y class="bgcontainer">
+  <view class="panel">
+    <view class="welcoming">
+      欢迎您，
+      <text class="tutorname">{{tutorInfo.tutorname}}</text> 导师，请您评分！
+      <text class="logout" bindtap="logOut">退出</text>
+    </view>
+    <view class="project">
+      <view class="protopleft">
+        <image class="projectimg" src="{{projectDetail.logo}}"></image>
+        <view class="projectaddress">{{projectDetail.area}}</view>
+      </view>
+      <view class="protopright">
+        <view class="projectname">{{projectDetail.parkName}}</view>
+        <view class="projectcompany">{{projectDetail.companyName}}</view>
+      </view>
+      <view>
+        <text class="projectdetail">{{projectDetail.parkDesc}}</text>
+      </view>
+    </view>
+    <view class="imgtitle">项目BP</view>
+    <!-- <image class="img" src="{{listarray[0]}}" bindtap="previewImg"></image> -->
+    <swiper indicator-dots="{{false}}" autoplay="{{false}}" class="project_swiper">
+      <block wx:for="{{listarray}}" wx:key="projectswiper">
+        <swiper-item>
+          <image src="{{item}}" data-index="{{index}}" class="img" bindtap="previewImg" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="imgtip">请点击放大查看（支持滑动查看）</view>
+    <!-- <button wx:if="{{projectDetail.isSetScore==0}}" class="scorebtn" bindtap="show">我要打分</button>
+    <button wx:else class="scorebtn">查看我的评分</button> -->
+    <button class="scorebtn" bindtap="show">
+      <text wx:if="{{projectDetail.isSetScore==0}}">我要打分</text>
+      <text wx:else>查看我的评分</text>
+    </button>
+    <view class="modal-box" hidden="{{!modalFlag}}">
+      <view class="modal-body">
+        <icon class="iconfont icon-guanbi closebtn" bindtap="hide"></icon>
+        <view class="modal-content {{projectDetail.isSetScore==0?'unscormc':'scoredmc'}} ">
+          <text class="scoretip">最高分为10分，最低分为1分，备注限制50字。</text>
+          <view class="score-content">
+            <view class="each">
+              <text class="label">技术含量：</text>
+              <view class="scorepanel">
+                <block wx:if="{{projectDetail.isSetScore==0}}">
+                  <picker class="scorepicker" bindchange="bindPickerChange" value="{{techIndex}}" data-type="tech" range="{{arrTech}}">
+                    <view class="scoreinput">
+                      {{arrTech[techIndex]}}
+                    </view>
+                    <text class="fen">分</text>
+                  </picker>
+                  <textarea placeholder="备注：" class="remarks" placeholder-class="remarksplaceholder" data-type="tech" bindblur="getInputRemark" maxlength="50" fixed="true"></textarea>
+                </block>
+                <block wx:else>
+                  <input class="scoreinput" disabled value="{{techScores.grade}}"></input>
+                  <textarea placeholder="备注：" class="remarks" disabled value="{{techScores.remark}}" placeholder-class="remarksplaceholder" fixed="true">
+                  </textarea>
+                </block>
+              </view>
+            </view>
+            <view class="each">
+              <text class="label">可持续性：</text>
+              <view class="scorepanel">
+                <block wx:if="{{projectDetail.isSetScore==0}}">
+                  <picker class="scorepicker" bindchange="bindPickerChange" value="{{substainIndex}}" data-type="substain" range="{{arrSubstain}}">
+                    <view class="scoreinput">
+                      {{arrSubstain[substainIndex]}}
+                    </view>
+                    <text class="fen">分</text>
+                  </picker>
+                  <textarea placeholder="备注：" class="remarks" placeholder-class="remarksplaceholder" data-type="substain" bindblur="getInputRemark" maxlength="50" fixed="true">
+                  </textarea>
+                </block>
+                <block wx:else>
+                  <input class="scoreinput" disabled value="{{substainScores.grade}}"></input>
+                  <textarea placeholder="备注：" class="remarks" disabled value="{{substainScores.remark}}" placeholder-class="remarksplaceholder" fixed="true">
+                  </textarea>
+                </block>
+              </view>
+            </view>
+            <view class="each">
+              <text class="label">综合评分：</text>
+              <view class="scorepanel">
+                <block wx:if="{{projectDetail.isSetScore==0}}">
+                  <picker class="scorepicker" bindchange="bindPickerChange" value="{{comprehensiveIndex}}" data-type="comprehensive" range="{{arrComprehensive}}">
+                    <view class="scoreinput">
+                      {{arrComprehensive[comprehensiveIndex]}}
+                    </view>
+                    <text class="fen">分</text>
+                  </picker>
+                  <textarea placeholder="备注：" class="remarks" placeholder-class="remarksplaceholder" data-type="comprehensive" bindblur="getInputRemark" maxlength="50" fixed="true">
+                  </textarea>
+                </block>
+                <block wx:else>
+                  <input class="scoreinput" disabled value="{{comprehensiveScores.grade}}"></input>
+                  <textarea placeholder="备注：" class="remarks" disabled value="{{comprehensiveScores.remark}}" placeholder-class="remarksplaceholder" fixed="true">
+                  </textarea>
+                </block>
+              </view>
+            </view>
+          </view>
+          <button wx:if="{{projectDetail.isSetScore==0}}" class="submitbtn" bindtap="submitScore">提交</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

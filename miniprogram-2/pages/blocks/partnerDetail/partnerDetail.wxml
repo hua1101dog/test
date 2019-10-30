@@ -1,0 +1,52 @@
+<scroll-view scroll-y class="bgcontainer">
+  <view class="panel">
+    <view class="title">
+      <view class="name">{{partnerMsg.name}}</view>
+      <view class="tag">{{partnerMsg.tag}}</view>
+    </view>
+    <view class="little-panel">
+      <view class="topborder">
+        <view class="little-title">企业介绍
+        </view>
+      </view>
+      <view class="little-content">
+        <text>{{partnerMsg.intro}}</text>
+      </view>
+      <view class="topborder">
+        <view class="little-title">企业重点业务板块
+        </view>
+      </view>
+      <view class="little-content">
+        <text>{{partnerMsg.keybusinesssection}}</text>
+      </view>
+      <view class="topborder">
+        <view class="little-title">企业未来3年发展重心及规划
+        </view>
+      </view>
+      <view class="little-content">
+        <text>{{partnerMsg.plan}}</text>
+      </view>
+      <view class="topborder">
+        <view class="little-title">企业需要开展合作的业务板块/重点项目
+        </view>
+      </view>
+      <view class="little-content">
+        <text>{{partnerMsg.mainproject}}</text>
+      </view>
+      <view class="topborder">
+        <view class="little-title">企业寻求合作的重点领域/主要对象
+        </view>
+      </view>
+      <view class="little-content">
+        <text>{{partnerMsg.seekto}}</text>
+      </view>
+      <view class="topborder">
+        <view class="little-title">企业合作联系方式
+        </view>
+      </view>
+      <view class="little-content">
+        <text>{{partnerMsg.contact}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>

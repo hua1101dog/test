@@ -1,0 +1,17 @@
+<scroll-view scroll-y class="bgcontainer">
+  <view class="panel">
+    <image class="tit" animation="{{animationData}}" src="{{animationimg}}"></image>
+    <view class="swipercontainer">
+      <view class="swiperimage">
+        <view class="more" bindtap="toList">更多+</view>
+        <swiper class='u-wrp-bnr' indicator-dots='{{true}}' autoplay='{{true}}' interval='5000' duration='1000' circular='{{true}}'>
+          <block wx:for="{{bnrUrl}}" wx:for-index="index" wx:key="index">
+            <swiper-item>
+              <image src='{{item.headImage}}' class='u-img-slide' data-id="{{item.id}}" data-imgurl="{{item.endImage}}" bindtap='clickSwiper'></image>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+  </view>
+</scroll-view>

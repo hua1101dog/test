@@ -1,0 +1,17 @@
+<scroll-view scroll-y class="bgcontainer">
+  <view class="flex-wrp">
+    <view class="flex-item bc_blue now" bindtap="toCompetition" data-type="0">
+      第三届i+创新大赛
+      <text class="tip">当期</text>
+    </view>
+    <view class="flex-item bc_blue past" bindtap="toCompetition" data-type="1">
+      第二届i+创新大赛
+      <text class="tip">往期</text>
+    </view>
+    <view class="flex-item bc_blue past" bindtap="toCompetition" data-type="2">
+      第一届i+创新大赛
+      <text class="tip">往期</text>
+    </view>
+    <view class="flex-item bc_blue" bindtap="toComference">合作伙伴大会</view>
+  </view>
+</scroll-view>

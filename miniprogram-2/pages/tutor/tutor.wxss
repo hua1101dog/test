@@ -1,0 +1,160 @@
+page{
+  height: 100%
+}
+
+.logincontainer{
+  height: 100%;
+  background-size: 100% 100%;
+  background-image: url("//contest.ovuems.com/applet/loginbg.png")
+}
+
+.loginform{
+  padding-top: 454rpx;
+}
+
+.loginput{
+  margin: 0 auto;
+  border:2rpx solid #1F519D;
+  border-radius: 5rpx;
+  width: 558rpx;
+  height: 72rpx;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+  margin-bottom: 30rpx;
+  color: #fff;
+}
+
+.loginputph{
+  font-size: 22rpx;
+  color: #AAB2C7;
+}
+
+.logbtn{
+  width: 562rpx;
+  height: 92rpx;
+  margin-top: 44rpx;
+  border-radius: 5rpx;
+  background-color: #00F9FF;
+  font-size: 46rpx;
+  font-weight: bold;
+  color: #15348C;
+  line-height: 92rpx;
+  letter-spacing: 20rpx;
+  padding-left: 60rpx;
+}
+
+.tutorcontainer {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-image: url("//contest.ovuems.com/applet/listbg.png")
+}
+
+.panel{
+  padding: 62rpx 44rpx;
+}
+
+.welcoming{
+  color: #FFFFFF;
+  font-size: 26rpx;
+}
+
+.tutorname{
+  font-weight: bold;
+  color:#00F9FF;
+}
+
+.logout{
+  float: right;
+  margin-right: 26rpx;
+}
+
+.projects{
+  margin-top: 70rpx;
+}
+
+.project{
+  width: 660rpx;
+  border: 2rpx solid #1fb6d8;
+  margin-bottom: 80rpx;
+}
+
+.protopleft{
+  display: inline-block;
+  width: 176rpx;
+  height: 176rpx;
+  margin-left: 40rpx;
+  margin-top: -40rpx;
+  border: 2rpx solid #1fb6d8;
+  background-color: #133083;
+}
+
+.projectimg{
+  width: 176rpx;
+  height: 136rpx;
+}
+
+.projectaddress{
+  color: #00F9FF;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.protopright{
+  display: inline-block;
+  width: 426rpx;
+  position: absolute;
+  margin-left: 12rpx;
+  margin-top: 22rpx;
+}
+
+.projectname{
+  color: #00F9FF;
+  font-size: 30rpx;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.projectcompany{
+  color: #F6DB5E;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.projectdetail{
+  padding: 24rpx 30rpx 24rpx 40rpx;
+  font-size: 20rpx;
+  color: #ffffff;
+  line-height: 36rpx;
+  word-wrap: break-word;
+}
+
+.scored{
+  position: relative;
+  background-color: #C6CBD9;
+}
+
+.scoredtag{
+  margin: 0 auto;
+  z-index: 999;
+  width: 192rpx;
+  height: 192rpx;
+  position: absolute;
+  font-weight: 700;
+  color: #666;
+  border: 4rpx solid #666;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  margin-left: -48px;
+  margin-top: -48px;
+  text-align: center;
+  line-height: 192rpx;
+}
